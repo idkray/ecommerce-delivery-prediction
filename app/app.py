@@ -20,7 +20,7 @@ st.title("Ecommerce Delivery Analytics Dashboard")
 # Load Data
 # -------------------------
 
-df = pd.read_csv("../data/processed/cleaned_data.csv")
+df = pd.read_csv("data/processed/cleaned_data.csv")
 
 # Convert target variable
 df["Reached.on.Time_Y.N"] = df["Reached.on.Time_Y.N"].map({1:"Delayed",0:"On Time"})
@@ -114,7 +114,7 @@ st.write("""
 
 st.header("Delivery Delay Prediction")
 
-model_df = pd.read_csv("../data/processed/cleaned_data.csv")
+model_df = pd.read_csv("data/processed/cleaned_data.csv")
 
 features = model_df[[
     "Customer_care_calls",
